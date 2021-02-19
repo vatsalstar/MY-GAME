@@ -5,6 +5,7 @@ function preload() {
     backgroundImg = loadImage("sprites/BG.png");
     boyImg = loadImage("sprites/BOY.png");
     carImg = loadImage("sprites/car.jpg");
+    bikeImg = loadImage("sprites/bike.jpg");
 }
 
 function setup(){
@@ -42,6 +43,7 @@ function draw(){
     boy.collide(ground);
 
     spawnCars();
+    spawnBike();
 
     drawSprites();
 
@@ -57,12 +59,12 @@ function spawnCars(){
 }
 
 
-function spawnCars(){
-    if(frameCount%180===0){
-        car = createSprite(1200,650);
-    car.addImage(carImg);
-    car.scale = 0.5;
-    car.velocityX = -6;
+function spawnBike(){
+    if(frameCount%280===0){
+        bike = createSprite(1200,650);
+    bike.addImage(bikeImg);
+     bike.scale = 0.5;
+    bike.velocityX = -6;
     }
 }
 
